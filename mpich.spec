@@ -4,7 +4,7 @@
 #
 Name     : mpich
 Version  : 3.1.4
-Release  : 5
+Release  : 6
 URL      : http://www.mpich.org/static/downloads/3.1.4/mpich-3.1.4.tar.gz
 Source0  : http://www.mpich.org/static/downloads/3.1.4/mpich-3.1.4.tar.gz
 Summary  : Portable library for atomic operations
