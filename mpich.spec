@@ -4,7 +4,7 @@
 #
 Name     : mpich
 Version  : 3.2
-Release  : 9
+Release  : 10
 URL      : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Source0  : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Summary  : High Performance and portable MPI
@@ -13,11 +13,14 @@ License  : BSD-3-Clause mpich2
 Requires: mpich-bin
 Requires: mpich-lib
 Requires: mpich-doc
+BuildRequires : hwloc-dev
+BuildRequires : libaio-dev
 BuildRequires : libxml2-dev
+BuildRequires : numactl-dev
 BuildRequires : pkgconfig(ice)
-BuildRequires : pkgconfig(uuid)
 BuildRequires : pkgconfig(x11)
 BuildRequires : psmisc
+BuildRequires : python3-dev
 BuildRequires : systemd-dev
 BuildRequires : util-linux-dev
 BuildRequires : valgrind-dev
@@ -71,9 +74,9 @@ lib components for the mpich package.
 %build
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
-export CFLAGS="$CFLAGS -fno-semantic-interposition -O3 -flto -ffunction-sections "
-export CXXFLAGS="$CXXFLAGS -fno-semantic-interposition -O3 -flto -ffunction-sections "
-%configure --disable-static
+export CFLAGS="$CFLAGS -O3 -ffunction-sections -flto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -ffunction-sections -flto -fno-semantic-interposition "
+%configure --disable-static --enable-fast=O3 --enable-yield=usleep
 make V=1  %{?_smp_mflags}
 
 %check

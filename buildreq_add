@@ -2,3 +2,10 @@
 # picked up automatically. One name per line, no whitespace.
 libxml2-dev
 valgrind-dev
+numactl-dev
+libaio-dev
+psmisc
+util-linux-dev
+systemd-dev
+python3-dev
+hwloc-dev
