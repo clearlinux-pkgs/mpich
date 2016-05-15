@@ -4,7 +4,7 @@
 #
 Name     : mpich
 Version  : 3.2
-Release  : 14
+Release  : 15
 URL      : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Source0  : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Summary  : High Performance and portable MPI
@@ -13,6 +13,7 @@ License  : BSD-3-Clause mpich2
 Requires: mpich-bin
 Requires: mpich-lib
 Requires: mpich-doc
+BuildRequires : beignet-dev
 BuildRequires : doxygen
 BuildRequires : hwloc-dev
 BuildRequires : libaio-dev
@@ -76,10 +77,10 @@ lib components for the mpich package.
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -falign-functions=32 -O3 -fno-semantic-interposition -flto "
-export FCFLAGS="$CFLAGS -falign-functions=32 -O3 -fno-semantic-interposition -flto "
-export FFLAGS="$CFLAGS -falign-functions=32 -O3 -fno-semantic-interposition -flto "
-export CXXFLAGS="$CXXFLAGS -falign-functions=32 -O3 -fno-semantic-interposition -flto "
+export CFLAGS="$CFLAGS -flto -falign-functions=32 -fno-semantic-interposition -O3 "
+export FCFLAGS="$CFLAGS -flto -falign-functions=32 -fno-semantic-interposition -O3 "
+export FFLAGS="$CFLAGS -flto -falign-functions=32 -fno-semantic-interposition -O3 "
+export CXXFLAGS="$CXXFLAGS -flto -falign-functions=32 -fno-semantic-interposition -O3 "
 %configure --disable-static --enable-fast=O3 --enable-yield=usleep
 make V=1  %{?_smp_mflags}
 

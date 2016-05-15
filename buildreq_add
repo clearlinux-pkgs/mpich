@@ -9,3 +9,6 @@ util-linux-dev
 systemd-dev
 python3-dev
 hwloc-dev
+beignet-dev
+doxygen
+hwloc-dev
