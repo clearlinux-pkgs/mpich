@@ -12,3 +12,5 @@ hwloc-dev
 beignet-dev
 doxygen
 hwloc-dev
+ocl-icd-dev
+
