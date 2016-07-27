@@ -4,7 +4,7 @@
 #
 Name     : mpich
 Version  : 3.2
-Release  : 16
+Release  : 17
 URL      : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Source0  : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Summary  : High Performance and portable MPI
@@ -75,17 +75,12 @@ lib components for the mpich package.
 %setup -q -n mpich-3.2
 
 %build
-export AR=gcc-ar
-export RANLIB=gcc-ranlib
-export NM=gcc-nm
-export CFLAGS="$CFLAGS -flto -O3 -falign-functions=32 -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -flto -O3 -falign-functions=32 -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -flto -O3 -falign-functions=32 -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -flto -O3 -falign-functions=32 -fno-semantic-interposition "
+export LANG=C
 %configure --disable-static --enable-fast=O3 --enable-yield=usleep
 make V=1  %{?_smp_mflags}
 
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
