@@ -4,7 +4,7 @@
 #
 Name     : mpich
 Version  : 3.2
-Release  : 20
+Release  : 21
 URL      : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Source0  : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Summary  : High Performance and portable MPI
