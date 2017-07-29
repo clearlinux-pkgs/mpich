@@ -4,7 +4,7 @@
 #
 Name     : mpich
 Version  : 3.2
-Release  : 21
+Release  : 22
 URL      : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Source0  : http://www.mpich.org/static/downloads/3.2/mpich-3.2.tar.gz
 Summary  : High Performance and portable MPI
@@ -75,18 +75,30 @@ lib components for the mpich package.
 %setup -q -n mpich-3.2
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-%configure --disable-static --enable-fast=O3 --enable-yield=usleep
+export SOURCE_DATE_EPOCH=1501299209
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
+%configure --disable-static --enable-fast=O3 --enable-yield=usleep --enable-handle-allocation=tls
 make V=1  %{?_smp_mflags}
 
 %check
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
+export SOURCE_DATE_EPOCH=1501299209
 rm -rf %{buildroot}
 %make_install
 
@@ -132,8 +144,17 @@ rm -rf %{buildroot}
 /usr/include/primitives/opa_nt_intrinsics.h
 /usr/include/primitives/opa_sun_atomic_ops.h
 /usr/include/primitives/opa_unsafe.h
-/usr/lib64/*.so
-/usr/lib64/pkgconfig/*.pc
+/usr/lib64/libfmpich.so
+/usr/lib64/libmpi.so
+/usr/lib64/libmpich.so
+/usr/lib64/libmpichcxx.so
+/usr/lib64/libmpichf90.so
+/usr/lib64/libmpicxx.so
+/usr/lib64/libmpifort.so
+/usr/lib64/libmpl.so
+/usr/lib64/libopa.so
+/usr/lib64/pkgconfig/mpich.pc
+/usr/lib64/pkgconfig/openpa.pc
 
 %files doc
 %defattr(-,root,root,-)
@@ -143,4 +164,9 @@ rm -rf %{buildroot}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/*.so.*
+/usr/lib64/libmpi.so.12
+/usr/lib64/libmpi.so.12.1.0
+/usr/lib64/libmpicxx.so.12
+/usr/lib64/libmpicxx.so.12.1.0
+/usr/lib64/libmpifort.so.12
+/usr/lib64/libmpifort.so.12.1.0

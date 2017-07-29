@@ -1,0 +1,201 @@
+Configure miss: x86_64-generic-linux-gnu-pathf90
+Configure miss: x86_64-generic-linux-gnu-pathf95
+Configure miss: x86_64-generic-linux-gnu-xlf2003
+Configure miss: x86_64-generic-linux-gnu-gfc
+Configure miss: ifort
+Configure miss: pathf90
+Configure miss: pathf95
+Configure miss: xlf2003
+Configure miss: hcoll/api/hcoll_api.h usability
+Configure miss: hcoll/api/hcoll_api.h presence
+Configure miss: hcoll/api/hcoll_api.h
+Configure miss: hcoll_init in -lhcoll
+Configure miss: valgrind.h usability
+Configure miss: memcheck.h usability
+Configure miss: memcheck.h presence
+Configure miss: memcheck.h
+Configure miss: helgrind.h usability
+Configure miss: helgrind.h presence
+Configure miss: helgrind.h
+Configure miss: drd.h usability
+Configure miss: drd.h presence
+Configure miss: drd.h
+Configure miss: whether the valgrind headers are broken or too old
+Configure miss: whether strdup needs a declaration
+Configure miss: whether snprintf needs a declaration
+Configure miss: whether strncmp needs a declaration
+Configure miss: whether putenv needs a declaration
+Configure miss: whether strerror needs a declaration
+Configure miss: atomic.h usability
+Configure miss: atomic.h presence
+Configure miss: atomic.h
+Configure miss: intrin.h usability
+Configure miss: intrin.h presence
+Configure miss: intrin.h
+Configure miss: support for gcc ia64 primitives
+Configure miss: support for gcc PowerPC atomics
+Configure miss: support for gcc ARM atomics
+Configure miss: support for gcc SiCortex atomics
+Configure miss: support for Windows NT atomic intrinsics
+Configure miss: support for Sun atomic operations library
+Configure miss: whether to enable strict fairness checks
+Configure miss: whether the compiler defines __FUNC__
+Configure miss: libraries to link Fortran main with C stdio routines
+Configure miss: whether the Fortran 90 compiler (gfortran -O2 -fPIC -g -feliminate-unused-debug-types  -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -Wl,--copy-dt-needed-entries -Wno-error -Wl,-z -Wl,now -Wl,-z -Wl,relro -Wl,-z,max-page-size=0x1000 -ftree-vectorize -m64 -march=westmere  -fasynchronous-unwind-tables -fno-omit-frame-pointer -Wp,-D_REENTRANT  -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition  -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition   ) is a cross-compiler
+Configure miss: Fortran 2008 support
+Configure miss: whether the Fortran 90 compiler (gfortran -O2 -fPIC -g -feliminate-unused-debug-types  -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -Wl,--copy-dt-needed-entries -Wno-error -Wl,-z -Wl,now -Wl,-z -Wl,relro -Wl,-z,max-page-size=0x1000 -ftree-vectorize -m64 -march=westmere  -fasynchronous-unwind-tables -fno-omit-frame-pointer -Wp,-D_REENTRANT  -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition  -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition   ) is a cross-compiler
+Configure miss: what libraries are needed to link Fortran90 programs with C routines that use stdio
+Configure miss: whether TRUE has been defined
+Configure miss: whether <math> available
+Configure miss: whether clock skew breaks make
+Configure miss: if alignment of structs with doubles is based on position
+Configure miss: if alignment of structs with long long ints is based on position
+Configure miss: if double alignment breaks rules, find actual alignment
+Configure miss: alignment restrictions on int64_t
+Configure miss: alignment restrictions on int32_t
+Configure miss: whether vsnprintf needs a declaration
+Configure miss: whether strerror_r returns char *
+Configure miss: whether strerror_r needs a declaration
+Configure miss: whether snprintf needs a declaration
+Configure miss: whether strdup needs a declaration
+Configure miss: whether mkstemp needs a declaration
+Configure miss: whether putenv needs a declaration
+Configure miss: pthread_cleanup_push
+Configure miss: whether pthread_cleanup_push is available (may be a macro in pthread.h)
+Configure miss: whether pthread_mutexattr_settype needs a declaration
+Configure miss: yield
+Configure miss: whether usleep needs a declaration
+Configure miss: bindprocessor
+Configure miss: thread_policy_set
+Configure miss: whether the CPU_SET and CPU_ZERO macros are defined
+Configure miss: whether gethostname needs a declaration
+Configure miss: CFUUIDCreate
+Configure miss: uuid_generate
+Configure miss: knem_io.h usability
+Configure miss: knem_io.h presence
+Configure miss: knem_io.h
+Configure miss: whether clock skew breaks make
+Configure miss: mpix.h
+Configure miss: sys/attr.h usability
+Configure miss: sys/attr.h presence
+Configure miss: sys/attr.h
+Configure miss: int large enough for pointers
+Configure miss: pvfs2-config
+Configure miss: sys/aio.h usability
+Configure miss: sys/aio.h presence
+Configure miss: sys/aio.h
+Configure miss: obsolete two-argument aio_write
+Configure miss: obsolete two-argument aio_suspend
+Configure miss: struct aiocb.aio_whence
+Configure miss: struct aiocb.aio_handle
+Configure miss: f_fstypename member of statfs structure
+Configure miss: st_fstype member of stat structure
+Configure miss: f_basetype member of statvfs structure
+Configure miss: whether strdup needs a declaration
+Configure miss: whether snprintf needs a declaration
+Configure miss: whether lstat needs a declaration
+Configure miss: whether readlink needs a declaration
+Configure miss: whether fsync needs a declaration
+Configure miss: whether ftruncate needs a declaration
+Configure miss: whether lseek64 needs a declaration
+Configure miss: whether usleep needs a declaration
+Configure miss: whether the compiler defines __FUNC__
+Configure miss: winsock2.h usability
+Configure miss: winsock2.h presence
+Configure miss: winsock2.h
+Configure miss: alloca
+Configure miss: whether hstrerror needs a declaration
+Configure miss: whether gettimeofday needs a declaration
+Configure miss: whether getpgid needs a declaration
+Configure miss: whether killpg needs a declaration
+Configure miss: tm.h usability
+Configure miss: tm.h presence
+Configure miss: tm.h
+Configure miss: tm_init in -ltorque
+Configure miss: KAFFINITY
+Configure miss: PROCESSOR_CACHE_TYPE
+Configure miss: CACHE_DESCRIPTOR
+Configure miss: LOGICAL_PROCESSOR_RELATIONSHIP
+Configure miss: RelationProcessorPackage
+Configure miss: SYSTEM_LOGICAL_PROCESSOR_INFORMATION
+Configure miss: GROUP_AFFINITY
+Configure miss: PROCESSOR_RELATIONSHIP
+Configure miss: NUMA_NODE_RELATIONSHIP
+Configure miss: CACHE_RELATIONSHIP
+Configure miss: PROCESSOR_GROUP_INFO
+Configure miss: GROUP_RELATIONSHIP
+Configure miss: SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX
+Configure miss: PSAPI_WORKING_SET_EX_BLOCK
+Configure miss: PSAPI_WORKING_SET_EX_INFORMATION
+Configure miss: main in -lgdi32
+Configure miss: sys/lgrp_user.h usability
+Configure miss: sys/lgrp_user.h presence
+Configure miss: sys/lgrp_user.h
+Configure miss: kstat.h usability
+Configure miss: kstat.h presence
+Configure miss: kstat.h
+Configure miss: picl.h usability
+Configure miss: picl.h presence
+Configure miss: picl.h
+Configure miss: whether _SC_NPROC_ONLN is declared
+Configure miss: whether _SC_NPROC_CONF is declared
+Configure miss: whether _SC_LARGE_PAGESIZE is declared
+Configure miss: mach/mach_host.h usability
+Configure miss: mach/mach_host.h presence
+Configure miss: mach/mach_host.h
+Configure miss: mach/mach_init.h usability
+Configure miss: mach/mach_init.h presence
+Configure miss: mach/mach_init.h
+Configure miss: whether CTL_HW is declared
+Configure miss: whether HW_NCPU is declared
+Configure miss: whether getprogname is declared
+Configure miss: whether getexecname is declared
+Configure miss: whether GetModuleFileName is declared
+Configure miss: old prototype of sched_setaffinity
+Configure miss: working _syscall3
+Configure miss: KERRIGHED
+Configure miss: lib
+Configure miss: fls
+Configure miss: flsl
+Configure miss: clz
+Configure miss: clzl
+Configure miss: pthread_np.h usability
+Configure miss: pthread_np.h presence
+Configure miss: pthread_np.h
+Configure miss: sys/cpuset.h
+Configure miss: cpuset_setaffinity
+Configure miss: library containing pthread_getthrds_np
+Configure miss: cpuset_setid
+Configure miss: whether CL_DEVICE_TOPOLOGY_AMD is declared
+Configure miss: cuda.h usability
+Configure miss: cuda.h presence
+Configure miss: cuda.h
+Configure miss: cuda_runtime_api.h usability
+Configure miss: cuda_runtime_api.h presence
+Configure miss: cuda_runtime_api.h
+Configure miss: nvml.h usability
+Configure miss: nvml.h presence
+Configure miss: nvml.h
+Configure miss: XOpenDisplay in -lX11
+Configure miss: NVCtrl/NVCtrl.h usability
+Configure miss: NVCtrl/NVCtrl.h presence
+Configure miss: NVCtrl/NVCtrl.h
+Configure miss: if plugin support is enabled
+Configure miss: libcr.h usability
+Configure miss: libcr.h presence
+Configure miss: libcr.h
+Configure miss: cr_init in -lcr
+Configure miss: debugging support
+Configure miss: warnings
+Configure miss: libftb.h usability
+Configure miss: libftb.h presence
+Configure miss: libftb.h
+Configure miss: FTB_Connect in -lftb
+Configure miss: whether strsignal needs a declaration
+Configure miss: whether gethostname needs a declaration
+Configure miss: whether clock skew breaks make
+Configure miss: Fortran libraries needed for getarg
+Configure miss: whether the Fortran 90 compiler (gfortran -O2 -fPIC -g -feliminate-unused-debug-types  -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -Wl,--copy-dt-needed-entries -Wno-error -Wl,-z -Wl,now -Wl,-z -Wl,relro -Wl,-z,max-page-size=0x1000 -ftree-vectorize -m64 -march=westmere  -fasynchronous-unwind-tables -fno-omit-frame-pointer -Wp,-D_REENTRANT  -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition  -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition  ) is a cross-compiler
+Configure miss: Fortran flag needed to accept free-form source
+Configure miss: whether MPI_2DOUBLE_COMPLEX is available
+Configure miss: whether MPI_2COMPLEX is available

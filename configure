@@ -1,1 +1,1 @@
---enable-fast=O3 --enable-yield=usleep
+--enable-fast=O3 --enable-yield=usleep --enable-handle-allocation=tls
