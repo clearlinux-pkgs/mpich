@@ -73,6 +73,9 @@ lib components for the mpich package.
 
 %prep
 %setup -q -n mpich-3.2
+pushd ..
+cp -a mpich-3.2 mpich-avx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -83,23 +86,36 @@ export SOURCE_DATE_EPOCH=1501299209
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto -fno-semantic-interposition "
+export CFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto=4 -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto=4 -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto=4-fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -falign-functions=32 -ffat-lto-objects -flto=4 -fno-semantic-interposition "
 %configure --disable-static --enable-fast=O3 --enable-yield=usleep --enable-handle-allocation=tls
 make V=1  %{?_smp_mflags}
+
+pushd ../mpich-avx2
+export CFLAGS="$CFLAGS -march=haswell "
+export FCFLAGS="$CFLAGS -march=haswell "
+export FFLAGS="$CFLAGS -march=haswell "
+export CXXFLAGS="$CXXFLAGS -march=haswell "
+%configure --disable-static --enable-fast=O3 --enable-yield=usleep --enable-handle-allocation=tls --libdir=/usr/lib64/haswell
+make V=1  %{?_smp_mflags}
+popd
 
 %check
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
 export SOURCE_DATE_EPOCH=1501299209
 rm -rf %{buildroot}
+pushd ../mpich-avx2
+%make_install
+rm -rf %{buildroot}/usr/bin
+popd
 %make_install
 
 %files
@@ -170,3 +186,4 @@ rm -rf %{buildroot}
 /usr/lib64/libmpicxx.so.12.1.0
 /usr/lib64/libmpifort.so.12
 /usr/lib64/libmpifort.so.12.1.0
+/usr/lib64/haswell/
